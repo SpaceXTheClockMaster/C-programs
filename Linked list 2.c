@@ -15,7 +15,7 @@ node *head1; //head1 node SECOND LINKED LIST
 //function prototype definitions
 void create(node *list);
 void display(node *list);
-void add(node *list1, node*list2)
+void add(node *list1, node*list2);
 
 main () //main() func start
 {
@@ -67,6 +67,7 @@ printf("Choice not found, re-enter choice by entering 0 at next question.");
 printf("\nDo you want to continue? (0/1): ");
 scanf("%d", &j);
 }while(j==0);
+return 0;
 }
 
 void create(node *list)
@@ -101,13 +102,15 @@ int n;
 if (list1->next != NULL && list2->next != NULL)
 {
 list1->data = list1->data + list2->data;
-if (list1->data > = 10 && list1->next!=NULL)
+if (list1->data >= 10 && list1->next!=NULL)
 {
 n = list1->data/10;
-list->next->data = n+list1->data;
+list1->next->data = n + list1->data;
 }
-add(list1->data, list2->data); //RECURSION.
+add(list1->next, list2->next); //RECURSION.
 }
+}
+
 
 
 
